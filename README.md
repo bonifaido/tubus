@@ -1,17 +1,13 @@
 tubus
 =====
-
 Web app around the [youtube-dl][youtube-dl] project. Browse your old downloads as well.
 
 Dependencies
 ------------
-[python][python]
-
-[node][node]
-
-[npm][npm]
-
-[ffmpeg][ffmpeg] (optional, for converting video files to audio-only)
+* [python][python]
+* [node][node]
+* [npm][npm]
+* [ffmpeg][ffmpeg] (optional, for converting video files to audio-only)
 
 Installing
 ----------
