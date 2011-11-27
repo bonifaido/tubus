@@ -1,0 +1,10 @@
+{
+	"name": "tubus",
+	"version": "0.0.1",
+	"description": "youtube downloader web app",
+	"dependencies": {
+		"connect": "1.8.x",
+		"socket.io": "0.8.x",
+		"youtube-dl": "git://github.com/bonifaido/node-youtube-dl.git"
+	}
+}
