@@ -47,8 +47,9 @@
 
 	<div id="error" class="alert-message error"></div>
 
-
 	<script type="text/javascript" charset="utf-8">
+	$(function() {
+
 		$('#download').hide();
 		$('#error').hide();
 
@@ -80,6 +81,7 @@
 			$('#download').hide();
 			$("#error").html("<strong>Download crashed: </strong>" + error);
 			$("#error").show();
+			console.log(error);
 		});
 
 		function showDownload(file) {
@@ -88,6 +90,7 @@
 			$('#download').show('fast');
 		}
 
+	});
 	</script>
 </body>
 </html>
