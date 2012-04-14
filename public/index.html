@@ -50,12 +50,7 @@
 	<script type="text/javascript" charset="utf-8">
 	$(function() {
 
-		$('#download').hide();
-		$('#error').hide();
-
-		var socket = io.connect();
-
-		$('#downloadButton').click(function () {
+		function download() {
 			var urlValue = $('#urlInput').val();
 			if (!urlValue) {
 				return;
@@ -64,7 +59,19 @@
 			socket.emit('download', {url: urlValue, format: formatValue});
 			$('#options').hide();
 			$("#progressbar").progressbar();
+		}
+
+		$('#download').hide();
+		$('#error').hide();
+		$('#urlInput').keypress(function (event) {
+			if (event.keyCode == 13) {
+				download();
+			}
 		});
+
+		var socket = io.connect();
+
+		$('#downloadButton').click(download);
 
 		socket.on('progress', function (progress) {
 			$("#progressbar").progressbar({ value: progress });
